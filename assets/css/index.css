@@ -1,0 +1,100 @@
+.image-box {
+	width: 400px;
+	display: block;
+	cursor: pointer;
+}
+
+.image-label {}
+
+.image {
+	width: 100%;
+	height: 100%;
+}
+
+/* Beauty Image */
+
+.beaty-image {
+	display: none;
+}
+
+#beaty-image-zoom {
+	transition: opacity .1s;
+	-webkit-user-drag: none;
+	width: 60%;
+}
+
+.beaty-image.show {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #4d4d4d57;
+}
+
+.beaty-image-content {
+	user-select: none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.close-beaty-image {
+	background-color: transparent;
+	position: absolute;
+	cursor: pointer;
+	top: 100px;
+	border-radius: 5px;
+	border: none;
+	left: 100px;
+}
+
+.beaty-image-label {
+	font-size: 25px;
+	margin: 15px 0px;
+}
+
+.back-beaty-image {
+	left: 0%;
+}
+
+.back-beaty-image,
+.prox-beaty-image {
+	position: absolute;
+	top: 50%;
+	height: 50%;
+	border: none;
+	background-color: unset;
+	cursor: pointer;
+	opacity: .70;
+	transition: .5s;
+	transform: translateY(-50%);
+}
+
+.back-beaty-image:hover,
+.prox-beaty-image:hover {
+	opacity: 1;
+	background-color: unset;
+}
+
+.prox-beaty-image {
+	right: 0%;
+	top: 50%;
+}
+
+@media (max-width : 790px) {
+	.beaty-image-content {
+		margin: auto;
+	}
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
